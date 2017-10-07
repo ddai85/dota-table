@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 
-const serverURL = HOSTNAME;
-
 
 class App extends React.Component {
   constructor(props) {
@@ -14,11 +12,31 @@ class App extends React.Component {
     };
   }
 
+  componentWillMount() {
+    this.playerRequest(54536288);
+  }
+
+  playerRequest(playerId) {
+    
+    $.ajax({
+      url: 'https://api.opendota.com/api/players/' + playerId + '/matches',
+      method: 'GET',
+      success: (body) => {
+        console.log(body);
+      },
+      error: (err) => {
+        console.log('player GET failed ', err);
+      }
+
+    })
+  }
+
 
   render() {
     return (
       <div>
-        <p>hello world!!!</p>
+        <p>Select up to 5 players</p>
+        
       </div>
     );
   }

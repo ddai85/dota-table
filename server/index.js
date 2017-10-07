@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 
-app.listen(process.env.PORT, () => {
+app.listen(8888, () => {
   console.log('listening to port ', process.env.PORT);
 });
 

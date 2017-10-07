@@ -1,0 +1,11 @@
+https://github.com/kronusme/dota2-api/blob/master/data/heroes.json
+
+josh: 40034912
+joe: 64751415
+steve: 10904548
+dan: 54536288
+wayne: 46621270
+
+https://api.opendota.com/api/players/%7Baccount_id%7D/matches
+
+https://docs.opendota.com/
