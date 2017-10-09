@@ -4,8 +4,8 @@
   "description": "a resource for generating custom tables for analyzing dota games",
   "main": "./server/index.js",
   "scripts": {
-    "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon --inspect server/index.js"
+    "react-dev": "NODE_ENV=development webpack -d --watch",
+    "server-dev": "NODE_ENV=development nodemon  --require dotenv/config --inspect server/index.js"
   },
   "author": "Dan Dai",
   "license": "ISC",
@@ -15,11 +15,13 @@
     "express": "^4.16.1",
     "install": "^0.10.1",
     "jquery": "^3.2.1",
+    "mysql2": "^1.4.2",
     "npm": "^5.4.2",
     "path": "^0.12.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "require": "^2.4.20",
+    "sequelize": "^4.13.5",
     "webpack": "^3.6.0"
   },
   "devDependencies": {
